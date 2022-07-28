@@ -18,6 +18,12 @@ function Header() {
         <Link to="/applicationForm">Application Form</Link>
         <Link to="/aboutUs">About Us</Link>
         <Link to="/studentsData">Students Data</Link>
+        <Link to="/Posts">Posts</Link>
+        <Link to="/users">Users</Link>
+        <Link to="/todos">Todos</Link>
+        <Link to="/Login">Login</Link>
+        <Link to="/SingleBlogPost">SingleBlogPost</Link>
+        <Link to="/Recruitmentform">Recruitmentform</Link>
       </div>
     </header>
   );

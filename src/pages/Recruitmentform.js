@@ -1,28 +1,26 @@
 import React, { useState } from "react";
+import './Recruitmentform.css'
 
 const Recruitmentform = () => {
-  const [inputs, setInputs] = useState({});
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
+ 
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(inputs);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`This name you entered is : ${name} and age is : ${age}` );
   };
   return (
-    <div>
+    <div className='form-wrapper'>
       <form onSubmit={handleSubmit}>
         <label>
           Enter your name:
           <input
             type="text"
             name="username"
-            value={inputs.username || ""}
-            onChange={handleChange}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
         </label>
         <label>
@@ -30,11 +28,11 @@ const Recruitmentform = () => {
           <input
             type="number"
             name="age"
-            value={inputs.age || ""}
-            onChange={handleChange}
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
           />
         </label>
-        <input type="submit" />
+        <input className='btn' type="submit" />
       </form>
     </div>
   );
